@@ -1,32 +1,44 @@
-
 #boxHeader {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
-#networkBox>hr {
-    padding-left: 50px;
-    width: 80% !important;
+#networkBox > hr {
+  padding-left: 50px;
+  width: 80% !important;
 }
 
-#netWorkBox>.mdl-textfield{
-    margin-left: 3em;
+#netWorkBox > .mdl-textfield {
+  margin-left: 3em;
 }
 
+#server{
+    margin-left: 50px;
+}
 #experimentBox {
-    border-left: 2px solid skyblue;
-    height: 90vh;
-
+  border-left: 2px solid skyblue;
+  height: 90vh;
 }
 
 #parameterTable {
-    margin-left: 4.5em;
+  margin-left: 4.5em;
 }
 
 #show-dialog {
-    margin-left: 250px;
-    top: 20;
+  margin-left: 250px;
+  top: 20;
 }
 
 .timer {
-    padding-left: 50px;
+  padding-left: 50px;
+}
+
+.mdl-progress>.progressbar{
+    background-color:green;
+}
+.progressbar{
+    height: 25px;
+}
+
+.bufferbar{
+    height:25px;
 }

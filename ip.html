@@ -2,6 +2,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
     <link rel="stylesheet" href="./css/ip.css" />
+    <link rel="stylesheet" href="./css/circle.css">
+
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
@@ -20,8 +22,7 @@
                     <button class="mdl-snackbar__action" type="button"></button>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield" id="server">
-                    <input class="mdl-textfield__input" type="text" id="serverip" disabled />
-                    <label class="mdl-textfield__label" for="serverip"> </label>
+                    <h3 id="serverip">0.0.0.0</h3>
                 </div>
                 <br />
                 <hr />
@@ -34,8 +35,7 @@
                     <button class="mdl-snackbar__action" type="button"></button>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield" id="client">
-                    <input class="mdl-textfield__input" type="text" id="clientip" disabled />
-                    <label class="mdl-textfield__label" for="clientip"> </label>
+                    <h3 id="serverip">0.0.0.0</h3>
                 </div>
             </div>
             <div id="graphs">
@@ -48,7 +48,7 @@
         </div>
         <div class="mdl-cell mdl-cell--6-col">
             <div id="experimentBox">
-                <h1 id="boxHeader">Experimental Parameters</h1>
+                <h1 id="boxHeader">Observational Parameters</h1>
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="parameterTable">
                     <thead>
                         <tr>
@@ -122,9 +122,8 @@
                     </div>
                 </dialog>
                 <br />
-                <br />
                 <div class="timer">
-                    <h4 id="boxHeader">Experiment Status</h4>
+                    <!--  <h4 id="boxHeader">Experiment Status</h4>
                     <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                         <thead>
                             <tr>
@@ -148,10 +147,19 @@
                         </tbody>
                     </table>
                     <br />
-                    <br />
+                        -->
+                    <h4>Experiment Status</h4>
+                    <!-- <div id="progressBar" class="mdl-progress mdl-js-progress"></div> -->
+                    <div id="circularProgress">
+                        <div class="c100" id="needed">
+                            <span><span id="perce">--</span>%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
 
-                    <h4>Progress Bar</h4>
-                    <div id="progressBar" class="mdl-progress mdl-js-progress"></div>
+                    </div>
                 </div>
             </div>
         </div>

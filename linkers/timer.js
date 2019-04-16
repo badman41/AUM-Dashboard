@@ -2,6 +2,9 @@ function showTimer() {
     var progressBar = document.getElementById('progressBar');
     var timeleftIndicator = document.getElementById('timeLeft')
     var percComplete = document.getElementById('percComplete')
+    var progressor = document.getElementById('needed');
+    var percente = document.getElementById('perce');
+
     length = document.getElementById('duration').value;
     console.log(length);
 
@@ -20,7 +23,24 @@ function showTimer() {
         }
 
     }
-    progress(0);
+    //progress(0);
+
+    function update(progVal) {
+        percent = Math.ceil((progVal / length) * 100);
+        //timeleftIndicator.innerText = progVal
+        //percComplete.innerText = Math.ceil(percent);
+        var style = "c100" + " " + "p" + percent;
+        //console.log(style);
+        progressor.className = style;
+        percente.innerHTML = percent;
+        if(percent<100){
+            setTimeout(function () {
+                update(progVal + 1)
+            }, 1000);
+        }
+
+    }
+    update(0);
 
 }
 

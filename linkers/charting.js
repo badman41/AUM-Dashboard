@@ -1,5 +1,5 @@
 function getData() {
-    console.log("hit!");
+    //console.log("hit!");
     return Math.random();
 }
 

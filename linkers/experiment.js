@@ -32,5 +32,7 @@ function startExperiment() {
     dialog.close();
     showTimer();
     startCharting();
-
+    //createSSH();
 }
+
+
